@@ -5,9 +5,9 @@ export const submitProfile = async (req, res) => {
   console.log('req.body ->', req.body)
   let newProfile = req.body // { name: 'Brad Jones', username: 'BJ2044', age: 30, sport: 'football', school: 'Pine Crest', classof: 2011, state: 'Florida', position: 'Linebacker' }
   //ADD CONST IN FRONT OF LINE BELOW
-  const profile = dbConnect.insertOne(newProfile)
+  const profile = dbConnect.insertOne(newProfile) //if collection does not exis than it will create one
 
-  //GET ID FROM THAT VARIABLE
+  //contains key-value pairs of data submitted in the request body
 
   // ADD ID TO RESPONSE BELOW INSTEAD OF NEWPROFILE
   //{message: 'Profile was added', id: id}
